@@ -1,0 +1,8 @@
+[submodule "web-static"]
+	path = web-static
+	url  = https://github.com/justino/p2pool-ui-punchy
+
+[submodule "qubit-hash"]
+	path = web-static
+	url  = https://github.com/qubitcoin-project/qubit-hash
+

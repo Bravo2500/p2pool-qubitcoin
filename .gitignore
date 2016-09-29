@@ -4,6 +4,7 @@
 
 /data/
 /litecoin_scrypt/build/
+/qubit-hash/build/
 /_trial_temp*
 Makefile.local
 .cache/
