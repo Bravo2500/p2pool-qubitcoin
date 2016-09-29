@@ -15,7 +15,7 @@ MIN_TARGET=0
 MAX_TARGET=2**256//2**20 - 1
 PERSIST=False
 WORKER_PORT=9372
-BOOTSTRAP_ADDRS='q2c1.ignorelist.com q2c2.ignorelist.com q2c3.ignorelist.com q2c4.ignorelist.com'.split(' ')
-ANNOUNCE_CHANNEL='#p2pool-q2c'
+BOOTSTRAP_ADDRS='127.0.0.1'.split(' ')
+#ANNOUNCE_CHANNEL='#p2pool-q2c'
 VERSION_CHECK=lambda v: True
 VERSION_WARNING = lambda v: 'Upgrade QubitCoin to >= 0.8.4.3!' if v < 70001 else None
