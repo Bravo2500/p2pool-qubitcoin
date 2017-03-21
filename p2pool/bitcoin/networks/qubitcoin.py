@@ -11,9 +11,9 @@ P2P_PORT = 7788
 ADDRESS_VERSION = 38
 RPC_PORT = 7799
 RPC_CHECK = defer.inlineCallbacks(lambda bitcoind: defer.returnValue(
-            'QubitCoinaddress' in (yield bitcoind.rpc_help()) and
+            (yield helper.check_genesis_block(bitcoind, '0000049ce6324e2f3f17eec90ce7e1f0bc9bcb44f85d769621d83cbb223ddc03')) and
             not (yield bitcoind.rpc_getinfo())['testnet']
-        ))
+))
 SUBSIDY_FUNC=lambda height: 2048*100000000 >> (height + 1)//60480
 BLOCKHASH_FUNC=lambda data: pack.IntType(256).unpack(__import__('qubit_hash').getPoWHash(data))
 POW_FUNC=lambda data: pack.IntType(256).unpack(__import__('qubit_hash').getPoWHash(data))
